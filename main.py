@@ -12,10 +12,8 @@ from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 from flask_gravatar import Gravatar
 from functools import wraps
 import os
-from boto.s3.connection import S3Connection
 
-
-SECRET_KEY = S3Connection(os.environ['SECRET_KEY'])
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 
